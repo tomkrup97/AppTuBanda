@@ -1,0 +1,73 @@
+[
+{
+    "id": 1000,
+    "category": "Tributo",
+    "nombre": "Ramonos",
+    "tributo": "Ramones",
+    "genero": "Punk",
+    "imagen": "https://i.ibb.co/k9gxyQV/ramonos.jpg"
+},
+
+{
+    "id": 1001,
+    "category": "Tributo",
+    "nombre": "Physical Graffiti",
+    "tributo": "Led Zeppelin",
+    "genero": "Classic Rock",
+    "imagen": "https://i.postimg.cc/7Y2bKqN1/Physical-tributo.jpg"
+},
+
+{
+    "id": 1002,
+    "category": "Tributo",
+    "nombre": "Wake Up Against",
+    "tributo": "Rage Against The Machine",
+    "genero": "Metal",
+    "imagen": ""
+},
+
+{
+    "id": 1003,
+    "category": "Tributo",
+    "nombre": "Seattle Supersonics",
+    "tributo": "Nirvana",
+    "genero": "Grunge",
+    "imagen": "https://i.postimg.cc/SQd5VLzL/ssupersonics.jpg"
+},
+
+{
+    "id": 1,
+    "category": "Cover",
+    "nombre": "La San Francisco",
+    "tributo": "",
+    "genero": "Rock and Roll",
+    "imagen": "https://i.postimg.cc/3R8NF2dq/la-san-francisco.jpg"
+},
+
+{
+    "id": 2,
+    "category": "Cover",
+    "nombre": "Power Of Nature",
+    "tributo": "",
+    "genero": "Rock internacional - Hard Rock",
+    "imagen": ""
+},
+
+{
+    "id": 3,
+    "category": "Cover",
+    "nombre": "Super Beat",
+    "tributo": "",
+    "genero": "Rock - Rock and Roll",
+    "imagen": ""
+},
+
+{
+    "id": 100,
+    "category": "Independientes",
+    "nombre": "Tales",
+    "tributo": "",
+    "genero": "Indie rock",
+    "imagen": "https://i.postimg.cc/HsVSnFWJ/tales.jpg"
+}
+]
