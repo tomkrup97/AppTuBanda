@@ -1,11 +1,12 @@
 import { StyleSheet,View,Text } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import ShopStack from './ShopStack'
-import CartStack from './CartStack'
-import OrdersStack from './OrdersStack'
-import colors from '../utils/globals/colors';
+import HomeStack from './HomeStack'
+import FavStack from './FavStack'
+import ShowsStack from './ShowsStack'
+
 import TabBarIcon from '../components/TabBarIcon';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -13,63 +14,43 @@ const MainNavigator = () => {
   return (
         <NavigationContainer>
            <Tab.Navigator
-                initialRouteName='ShopStack'
+                initialRouteName='HomeStack'
                 screenOptions={{
                     headerShown:false,
                     tabBarShowLabel:false,
-                    tabBarStyle: styles.tabBar
+                    
 
 
                 }}
            >
                 <Tab.Screen 
-                name='ShopStack'
-                component={ShopStack}
+                name='HomeStack'
+                component={HomeStack}
                 options={{
                     tabBarIcon: ({focused}) => 
-                    <TabBarIcon title="Productos" nameIcon="home" focused={focused}/>
+                    <TabBarIcon title="Bandas" nameIcon="folder-music" focused={focused}/>
                 }}
                 />
                 <Tab.Screen 
-                    name='CartStack' 
-                    component={CartStack}
+                    name='FavStack' 
+                    component={FavStack}
                     options={{
                         tabBarIcon: ({focused}) => 
-                        <TabBarIcon title="Carrito" nameIcon="shopping-cart" focused={focused}/>
+                        <TabBarIcon title="Favoritos" nameIcon="star" focused={focused}/>
                     }}
 
                 />
                 <Tab.Screen 
-                    name='OrdersStack' 
-                    component={OrdersStack}
+                    name='ShowsStack' 
+                    component={ShowsStack}
                     options={{
-                        tabBarIcon: ({focused}) => <TabBarIcon title="Ordenes" nameIcon="list" focused={focused}/>
+                        tabBarIcon: ({focused}) => <TabBarIcon title="Shows" nameIcon="calendar" focused={focused}/>
                     }}
                     />
+
            </Tab.Navigator>
         </NavigationContainer>
   )
 }
 
 export default MainNavigator
-
-const styles = StyleSheet.create({
-    tabBar:{
-        backgroundColor:colors.green3,
-        height:80,
-        position:"absolute",
-        left:20,
-        right:20,
-        bottom:25,
-        borderRadius:15,
-        elevation:4,
-        /*Shadow IOS*/
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.23,
-        shadowRadius: 2.62, 
-    }
-})

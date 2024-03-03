@@ -70,7 +70,13 @@ const styles = StyleSheet.create({
   },
   subtitle:{
     fontSize:20,
-    color: 'white'
+    color: 'white',
+  },
+  shows:{
+    fontSize:20,
+    color: 'white',
+    flex:1,
+    marginTop:50
   }
 
 })
