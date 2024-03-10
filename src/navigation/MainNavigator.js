@@ -36,7 +36,7 @@ const MainNavigator = () => {
                     component={FavStack}
                     options={{
                         tabBarIcon: ({focused}) => 
-                        <TabBarIcon title="Favoritos" nameIcon="star" focused={focused}/>
+                        <TabBarIcon title="Favoritos" nameIcon="star" focused={focused} color={focused ? "black" : "grey"}/>
                     }}
 
                 />

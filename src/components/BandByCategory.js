@@ -1,12 +1,16 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
+import FavItem from './FavItem'
 import React from 'react'
 
 
 const BandByCategory = ({item,navigation}) => {
+  console.log('BandByCategory item:', item);
+
   return (
     <Pressable onPress={()=>navigation.navigate("BandDetail",{bandId:item.id})} style={styles.container}>
       <Text style={styles.text}> {item.nombre}</Text>
       <Image style={styles.image} source={{uri:item.imagen}} resizeMode="cover"/>
+      <FavItem band={item}></FavItem>
     </Pressable>
   )
 }
