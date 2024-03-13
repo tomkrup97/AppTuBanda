@@ -1,36 +1,33 @@
-import { StyleSheet, Text, View,Image,Pressable } from 'react-native'
-import bands from '../../utils/bands.json'
-import { useEffect, useState } from 'react'
-import FavItem from '../components/FavItem'
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import bands from '../../utils/bands.json';
+import FavItem from '../components/FavItem';
 
-const BandDetail = ({route}) => {
-  const {bandId} = route.params
-  const [band,setBand] = useState({})
+const BandDetail = ({ route }) => {
+  const { bandId } = route.params;
+  const [band, setBand] = useState(null);
 
-  useEffect(()=>{
-    const bandFinded = bands.find(band => band.id === bandId)
-    setBand(bandFinded)
-  },[bandId])
+  useEffect(() => {
+    const bandFound = bands.find(band => band.id === bandId);
+    setBand(bandFound);
+  }, [bandId]);
 
-  
+
 
   return (
     <View style={styles.container}>
-      <View style={styles.content} >
-        <Image
-          style={styles.image}
-          source={{uri:band.imagen}}
-        />
+      <View style={styles.content}>
+        <Image style={styles.image} source={{ uri: band.imagen }} />
         <View style={styles.containerText}>
           <Text style={styles.title}>{band.nombre}</Text>
           <Text style={styles.subtitle}>Tributo a {band.tributo}</Text>
         </View>
-        <FavItem></FavItem>
+        <FavItem band={band} />
       </View>
-      <Text style={styles.shows}>Próximos Shows {band.show}</Text>
+      <Text style={styles.shows}>Próximos Shows{band.show}</Text>
     </View>
-  )
-}
+  );
+};
 
 export default BandDetail
 

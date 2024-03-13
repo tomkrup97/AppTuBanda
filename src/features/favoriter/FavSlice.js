@@ -10,7 +10,7 @@ export const favSlice = createSlice({
       state.favoriteBands.push(action.payload);
     },
     removeFromFavorites: (state, action) => {
-      state.favoriteBands = state.favoriteBands.filter(band => band.id !== action.payload);
+      state.favoriteBands = state.favoriteBands.filter((band) => band.id !== action.payload);
     },
   },
 });
