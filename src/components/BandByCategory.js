@@ -10,7 +10,7 @@ const BandByCategory = ({item,navigation}) => {
     <Pressable onPress={()=>navigation.navigate("BandDetail",{bandId:item.id})} style={styles.container}>
       <Text style={styles.text}> {item.nombre}</Text>
       <Image style={styles.image} source={{uri:item.imagen}} resizeMode="cover"/>
-      <FavItem band={item}></FavItem>
+      
     </Pressable>
   )
 }

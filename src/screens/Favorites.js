@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import FavItem from '../components/FavItem';
 
 const Favorites = () => {
-  const favoriteBands = useSelector(state => state.bands.favoriteBands);
+  const favoriteBands = useSelector((state) => state.bands.favoriteBands);
 
   return (
     <View style={styles.container}>
@@ -13,9 +13,10 @@ const Favorites = () => {
       ) : (
         <FlatList
           data={favoriteBands}
-          keyExtractor={item => item.id.toString()}
-          renderItem={({ item }) => <FavItem band={item} />}
+          keyExtractor={(item)=>item.id}
+          renderItem={({ item }) => <FavItem key={item.id} band={item} />}
         />
+        
       )}
     </View>
   );

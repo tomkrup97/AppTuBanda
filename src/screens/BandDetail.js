@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import bands from '../../utils/bands.json';
 import FavItem from '../components/FavItem';
+import { UseDispatch, useDispatch } from 'react-redux';
+import { addToFavorites } from '../features/favoriter/FavSlice';
+
 
 const BandDetail = ({ route }) => {
+  const dispatch = useDispatch()
   const { bandId } = route.params;
-  const [band, setBand] = useState(null);
+  const [band, setBand] = useState({});
 
   useEffect(() => {
     const bandFound = bands.find(band => band.id === bandId);

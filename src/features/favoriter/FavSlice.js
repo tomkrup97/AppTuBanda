@@ -8,6 +8,7 @@ export const favSlice = createSlice({
   reducers: {
     addToFavorites: (state, action) => {
       state.favoriteBands.push(action.payload);
+      console.log(state)
     },
     removeFromFavorites: (state, action) => {
       state.favoriteBands = state.favoriteBands.filter((band) => band.id !== action.payload);
