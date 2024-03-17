@@ -1,5 +1,4 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native'
-import categories from '../../utils/categories.json'
 
 const CardCategory = ({item,navigation}) => {
   return (
